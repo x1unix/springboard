@@ -8,10 +8,16 @@
   "groups": {
     "Monitoring": [
       {
-        "iconUrl": "/icons/grafana.svg",
+        "iconUrl": "/logos/grafana.svg",
         "title": "Grafana",
         "description": "Dashboard",
-        "url": "//{hostname}:8000/"
+        "url": "//{hostname}:3000/"
+      },
+      {
+        "iconUrl": "/logos/portainer.webp",
+        "title": "Portainer",
+        "description": "Container management",
+        "url": "//{hostname}:9000/"
       }
     ],
     "Misc": [

@@ -32,7 +32,7 @@ const App: React.FC = () => {
       className="Page__background"
       style={getBackgroundStyles(config)}
     />
-    <Page title="Springboard">
+    <Page title={config?.title ?? 'Springboard'}>
       {error ? (
         <Group title="Error" key="error" vertical>
           <p>
