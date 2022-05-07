@@ -12,7 +12,7 @@ export interface Shortcut {
 export interface Config {
   title: string;
   background?: {
-    url: string;
+    url: string | string[];
     blur?: string;
     opacity?: string;
   }
@@ -34,6 +34,16 @@ export const fetchConfig = () => (
   })
 );
 
+const getWallpaperUrl = (url?: string | string[]) => {
+  if (!url) return;
+  if (Array.isArray(url)) {
+    const item = url[Math.floor(Math.random() * url.length)];
+    return `url(${item})`;
+  }
+
+  return `url(${url})`;
+}
+
 export const getBackgroundStyles = (cfg?: Config): React.CSSProperties | undefined => {
   if (!cfg) {
     return;
@@ -46,7 +56,7 @@ export const getBackgroundStyles = (cfg?: Config): React.CSSProperties | undefin
     }
 
     return {
-      backgroundImage: `url(${background?.url})`,
+      backgroundImage: getWallpaperUrl(background?.url),
       filter: background?.blur ? `blur(${background.blur})` : 'none',
       opacity: background?.opacity ?? '1',
     };
