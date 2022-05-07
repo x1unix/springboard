@@ -1,0 +1,23 @@
+.App {
+  display: table;
+  height: 100%;
+  width: 100%;
+  max-width: 1024px;
+  background: red;
+  margin: 0 auto;
+}
+
+#root {
+  position: relative;
+}
+
+.Page__background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}

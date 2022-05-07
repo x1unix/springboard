@@ -1,0 +1,34 @@
+$page-margin-x: 20px;
+$page-margin-y: 10px;
+
+.Page {
+  display: table;
+  height: 100%;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto 32px auto;
+  padding: $page-margin-y $page-margin-x;
+}
+
+.Page__title {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0;
+  padding: 3rem 0 3rem 0;
+}
+
+@media (max-width: 480px) {
+  .Page__title {
+    padding: 0.3rem 0;
+    margin: #{-$page-margin-y} #{-$page-margin-x};
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    background: black;
+  }
+
+  .Page__items {
+    padding-top: 1rem;
+  }
+}

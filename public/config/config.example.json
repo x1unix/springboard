@@ -1,0 +1,25 @@
+{
+  "title": "Springboard",
+  "background": {
+    "url": "https://512pixels.net/downloads/macos-wallpapers/10-13.jpg",
+    "blur": "2px",
+    "opacity": "0.4"
+  },
+  "groups": {
+    "Monitoring": [
+      {
+        "iconUrl": "/icons/grafana.svg",
+        "title": "Grafana",
+        "description": "Dashboard",
+        "url": "//{hostname}:8000/"
+      }
+    ],
+    "Misc": [
+      {
+        "title": "Download example",
+        "url": "/config/config.json",
+        "description": "Download Springboard config example"
+      }
+    ]
+  }
+}

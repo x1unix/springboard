@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Springboard",
+  "name": "Springboard",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,22 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "/img/logo96.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "96x96"
     },
     {
-      "src": "logo512.png",
+      "src": "/img/logo128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/img/logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/img/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

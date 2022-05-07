@@ -1,10 +1,35 @@
+:root {
+  --ui-color-primary: rgb(204, 204, 220);
+  --ui-color-background: rgb(17, 18, 23);
+  --ui-color-border: rgb(104, 104, 120);
+  --ui-box-radius: 4px;
+  --ui-box-padding: 4px 8px;
+
+  --ui-btn-color: rgb(204, 204, 220);
+  --ui-btn-background: rgba(204, 204, 220, 0.16);
+  --ui-btn-hovered-background: rgba(204, 204, 220, 0.2);
+  --ui-btn-hovered-color: rgb(204, 204, 220);
+  --ui-btn-shadow: rgba(24, 26, 27, 0.75) 0px 1px 2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font: 16px Inter, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-display: swap;
+  letter-spacing: -.015em;
+  line-height: 1.4;
+  color: var(--ui-color-primary);
+  background-color: var(--ui-color-background);
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 code {

@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Config, fetchConfig, getBackgroundStyles } from './config/config';
+import AppsList from './compoments/AppsList';
+import Page from './compoments/Page';
+import Group from './compoments/Group';
+import Spinner from './compoments/Spinner';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App: React.FC = () => {
+  const [error, setError] = useState<Error>();
+  const [config, setConfig] = useState<Config>();
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    fetchConfig().then(cfg => {
+      setLoading(false);
+      setConfig(cfg);
+    }).catch(err => {
+      setLoading(false);
+      setError(err);
+    });
+  }, []);
+
+  if (isLoading) {
+    return <Spinner centered />
+  }
+
+  return <>
+    <div
+      className="Page__background"
+      style={getBackgroundStyles(config)}
+    />
+    <Page title="Springboard">
+      {error ? (
+        <Group title="Error" key="error" vertical>
+          <p>
+            Failed to fetch dashboard config:
+          </p>
+          <div>
+            <code>{error?.message}</code>
+          </div>
+        </Group>
+      ) : (
+        <AppsList categories={config?.groups} />
+      )}
+    </Page>
+  </>
+};
 
 export default App;

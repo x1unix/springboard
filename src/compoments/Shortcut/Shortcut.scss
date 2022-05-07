@@ -1,0 +1,61 @@
+.Shortcut {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: var(--ui-btn-color);
+  background: var(--ui-btn-background);
+  border-radius: var(--ui-box-radius);
+  padding: var(--ui-box-padding);
+  border: 1px solid var(--ui-btn-hovered-background);
+
+  &:hover {
+    color: var(--ui-btn-hovered-color);
+    background: var(--ui-btn-hovered-background);
+    box-shadow: var(--ui-btn-shadow);
+  }
+}
+
+.Shortcut__frame {
+  display: block;
+}
+
+.Shortcut__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow: hidden;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+
+.Shortcut__title,
+.Shortcut__subTitle {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.Shortcut__subTitle {
+  font-size: 0.8rem;
+}
+
+.Shortcut__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  max-width: 64px;
+  flex-shrink: 0;
+  padding: 5px;
+}
+
+.Shortcut__icon {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.Shortcut__subTitle {
+  margin: 0;
+}

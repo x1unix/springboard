@@ -1,0 +1,103 @@
+.Spinner {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: inline-block;
+  background: var(--ui-color-border);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.Spinner--transparent {
+  background: none;
+}
+
+.Spinner--center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Spinner div {
+  width: 6%;
+  height: 16%;
+  background: #FFF;
+  position: absolute;
+  left: 49%;
+  top: 43%;
+  opacity: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  animation: fade 1s linear infinite;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.25;
+  }
+}
+
+.Spinner div.bar1 {
+  transform: rotate(0deg) translate(0, -130%);
+  animation-delay: 0s;
+}
+
+.Spinner div.bar2 {
+  transform: rotate(30deg) translate(0, -130%);
+  animation-delay: -0.9167s;
+}
+
+.Spinner div.bar3 {
+  transform: rotate(60deg) translate(0, -130%);
+  animation-delay: -0.833s;
+}
+
+.Spinner div.bar4 {
+  transform: rotate(90deg) translate(0, -130%);
+  animation-delay: -0.7497s;
+}
+
+.Spinner div.bar5 {
+  transform: rotate(120deg) translate(0, -130%);
+  animation-delay: -0.667s;
+}
+
+.Spinner div.bar6 {
+  transform: rotate(150deg) translate(0, -130%);
+  animation-delay: -0.5837s;
+}
+
+.Spinner div.bar7 {
+  transform: rotate(180deg) translate(0, -130%);
+  animation-delay: -0.5s;
+}
+
+.Spinner div.bar8 {
+  transform: rotate(210deg) translate(0, -130%);
+  animation-delay: -0.4167s;
+}
+
+.Spinner div.bar9 {
+  transform: rotate(240deg) translate(0, -130%);
+  animation-delay: -0.333s;
+}
+
+.Spinner div.bar10 {
+  transform: rotate(270deg) translate(0, -130%);
+  animation-delay: -0.2497s;
+}
+
+.Spinner div.bar11 {
+  transform: rotate(300deg) translate(0, -130%);
+  animation-delay: -0.167s;
+}
+
+.Spinner div.bar12 {
+  transform: rotate(330deg) translate(0, -130%);
+  animation-delay: -0.0833s;
+}
