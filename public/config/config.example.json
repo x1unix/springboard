@@ -24,6 +24,12 @@
         "title": "Graylog",
         "description": "Log monitoring",
         "url": "//{hostname}:8800/"
+      },
+      {
+        "iconUrl": "/logos/kibana.svg",
+        "title": "Kibana",
+        "description": "Log monitoring",
+        "url": ""
       }
     ],
     "Infrastructure": [
@@ -31,7 +37,33 @@
         "iconUrl": "/logos/portainer.webp",
         "title": "Portainer",
         "description": "Container management",
-        "url": "//{hostname}:9000/"
+        "url": "#"
+      },
+      {
+        "iconUrl": "/logos/kubernetes.svg",
+        "title": "Kubernetes",
+        "description": "Kubernetes Dashboard",
+        "url": "#"
+      }
+    ],
+    "Network and IoT": [
+      {
+        "iconUrl": "/logos/home-assistant.svg",
+        "title": "Home Assistant",
+        "description": "Home automation",
+        "url": "#"
+      },
+      {
+        "iconUrl": "/logos/pihole.svg",
+        "title": "Pi-hole",
+        "description": "Network-wide Ad Blocking",
+        "url": "#"
+      },
+      {
+        "iconUrl": "/logos/transmission.svg",
+        "title": "Transmission",
+        "description": "Web interface",
+        "url": "#"
       }
     ]
   }
