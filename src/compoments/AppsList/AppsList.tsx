@@ -18,6 +18,7 @@ const AppsList: React.FC<Props> = ({ categories }) => (
             subTitle={description}
             iconUrl={iconUrl}
             href={extrapolateUrl(url)}
+            style={{ height: '100%' }}
           />
         ))}
       </Group>

@@ -17,6 +17,8 @@
   list-style: none;
   margin: 1rem -5px;
   // margin: 1rem 0px;
+  align-items: stretch;
+  justify-content: stretch;
   padding: 0;
 }
 
@@ -71,6 +73,12 @@
       border-bottom-right-radius: var(--ui-box-radius);
       border-bottom: 1px solid var(--ui-color-border);
     }
+  }
+}
+
+@media (min-width: 481px) {
+  .Group__item .Shortcut {
+    // max-height: 65px;
   }
 }
 
