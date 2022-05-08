@@ -5,7 +5,23 @@ import Page from './compoments/Page';
 import Group from './compoments/Group';
 import Spinner from './compoments/Spinner';
 import './App.scss';
+import ConfigNotFoundError from './config/error';
+import OOBE from './compoments/OOBE/OOBE';
 
+const renderError = (err: Error) => (
+  err instanceof ConfigNotFoundError ? (
+    <OOBE />
+  ) : (
+    <Group title="Error" key="error" vertical>
+      <p>
+        Failed to fetch dashboard config:
+      </p>
+      <div>
+        <code>{err?.message}</code>
+      </div>
+    </Group>
+  )
+);
 
 const App: React.FC = () => {
   const [error, setError] = useState<Error>();
@@ -33,16 +49,7 @@ const App: React.FC = () => {
       style={getBackgroundStyles(config)}
     />
     <Page title={config?.title ?? 'Springboard'}>
-      {error ? (
-        <Group title="Error" key="error" vertical>
-          <p>
-            Failed to fetch dashboard config:
-          </p>
-          <div>
-            <code>{error?.message}</code>
-          </div>
-        </Group>
-      ) : (
+      {error ? renderError(error) : (
         <AppsList categories={config?.groups} />
       )}
     </Page>

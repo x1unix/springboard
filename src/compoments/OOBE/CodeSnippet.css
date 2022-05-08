@@ -1,0 +1,14 @@
+.CodeSnippet {
+  display: block;
+  font: 0.8rem var(--ui-font-monospace);
+  width: 100%;
+  outline: 0;
+  border-radius: var(--ui-box-radius);
+  border: 1px solid var(--ui-color-border);
+  background: var(--ui-btn-background);
+  color: var(--ui-btn-color);
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  resize: none;
+}

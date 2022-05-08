@@ -1,7 +1,13 @@
 {
   "title": "Springboard",
   "background": {
-    "url": "https://512pixels.net/downloads/macos-wallpapers/10-13.jpg",
+    "url": [
+      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Ashim%20DSilva.jpg",
+      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Canazei%20Granite%20Ridges.jpg",
+      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Jonas%20Nilsson%20Lee.jpg",
+      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Morskie%20Oko.jpg",
+      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Mr.%20Lee.jpg"
+    ],
     "blur": "2px",
     "opacity": "0.4"
   },
@@ -14,17 +20,18 @@
         "url": "//{hostname}:3000/"
       },
       {
+        "iconUrl": "/logos/graylog.svg",
+        "title": "Graylog",
+        "description": "Log monitoring",
+        "url": "//{hostname}:8800/"
+      }
+    ],
+    "Infrastructure": [
+      {
         "iconUrl": "/logos/portainer.webp",
         "title": "Portainer",
         "description": "Container management",
         "url": "//{hostname}:9000/"
-      }
-    ],
-    "Misc": [
-      {
-        "title": "Download example",
-        "url": "/config/config.json",
-        "description": "Download Springboard config example"
       }
     ]
   }
