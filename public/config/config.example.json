@@ -1,15 +1,15 @@
 {
   "title": "Springboard",
   "background": {
-    "url": [
-      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Ashim%20DSilva.jpg",
-      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Canazei%20Granite%20Ridges.jpg",
-      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Jonas%20Nilsson%20Lee.jpg",
-      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Morskie%20Oko.jpg",
-      "https://raw.githubusercontent.com/elementary/wallpapers/master/backgrounds/Mr.%20Lee.jpg"
-    ],
-    "blur": "2px",
-    "opacity": "0.4"
+    "url": "/img/wallpaper-default.svg",
+    "style": {
+      "backgroundRepeat": "repeat",
+      "backgroundSize": "420px auto",
+      "backgroundPosition": "none",
+      "backgroundAttachment": "none",
+      "filter": "invert()",
+      "opacity": "0.1"
+    }
   },
   "groups": {
     "Monitoring": [
