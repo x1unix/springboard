@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Config, fetchConfig, getBackgroundStyles } from './config/config';
+import ConfigNotFoundError from './config/error';
 import AppsList from './compoments/AppsList';
 import Page from './compoments/Page';
 import Group from './compoments/Group';
 import Spinner from './compoments/Spinner';
-import './App.scss';
-import ConfigNotFoundError from './config/error';
 import OOBE from './compoments/OOBE/OOBE';
+import './App.scss';
 
 const renderError = (err: Error) => (
   err instanceof ConfigNotFoundError ? (
@@ -48,7 +48,10 @@ const App: React.FC = () => {
       className="Page__background"
       style={getBackgroundStyles(config)}
     />
-    <Page title={config?.title ?? 'Springboard'}>
+    <Page
+      title={config?.title ?? 'Springboard'}
+      style={config?.style}
+    >
       {error ? renderError(error) : (
         <AppsList categories={config?.groups} />
       )}

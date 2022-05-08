@@ -1,12 +1,13 @@
-import React, { PropsWithChildren } from 'react';
+import React, { CSSProperties, PropsWithChildren } from 'react';
 import './Page.scss';
 
 interface Props {
   title: string
+  style?: CSSProperties
 }
 
-const Page: React.FC<PropsWithChildren<Props>> = ({ children, title }) => (
-  <div className="Page">
+const Page: React.FC<PropsWithChildren<Props>> = ({ children, title, ...props }) => (
+  <div className="Page" {...props}>
     <h1 className="Page__title">
       {title}
     </h1>

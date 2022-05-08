@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import ConfigNotFoundError from "./error";
 
 const configUrl = '/config/config.json';
@@ -18,8 +19,10 @@ export interface Config {
     url: string | string[];
     blur?: string;
     opacity?: string;
+    style?: CSSProperties;
   }
   groups?: ShortcutGroups
+  style?: CSSProperties;
 }
 
 export const getConfigUrl = () => {
@@ -73,16 +76,18 @@ export const getBackgroundStyles = (cfg?: Config): React.CSSProperties | undefin
   }
 
   try {
-    const { background } = cfg;
+    const { background, style } = cfg;
     if (!background?.url) {
       return;
     }
 
-    return {
+    const css = {
       backgroundImage: getWallpaperUrl(background?.url),
       filter: background?.blur ? `blur(${background.blur})` : 'none',
       opacity: background?.opacity ?? '1',
     };
+
+    return style ? { ...css, ...style } : css;
   } catch (err) {
     console.error('Failed to process background styles from config:', err);
     return;
