@@ -59,37 +59,3 @@ export const fetchConfig = () => (
     }
   })
 );
-
-const getWallpaperUrl = (url?: string | string[]) => {
-  if (!url) return;
-  if (Array.isArray(url)) {
-    const item = url[Math.floor(Math.random() * url.length)];
-    return `url(${item})`;
-  }
-
-  return `url(${url})`;
-}
-
-export const getBackgroundStyles = (cfg?: Config): React.CSSProperties | undefined => {
-  if (!cfg) {
-    return;
-  }
-
-  try {
-    const { background, style } = cfg;
-    if (!background?.url) {
-      return;
-    }
-
-    const css = {
-      backgroundImage: getWallpaperUrl(background?.url),
-      filter: background?.blur ? `blur(${background.blur})` : 'none',
-      opacity: background?.opacity ?? '1',
-    };
-
-    return style ? { ...css, ...style } : css;
-  } catch (err) {
-    console.error('Failed to process background styles from config:', err);
-    return;
-  }
-};

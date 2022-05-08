@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Config, fetchConfig, getBackgroundStyles } from './config/config';
+import { Config, fetchConfig } from './config/config';
 import ConfigNotFoundError from './config/error';
 import AppsList from './compoments/AppsList';
 import Page from './compoments/Page';
 import Group from './compoments/Group';
 import Spinner from './compoments/Spinner';
 import OOBE from './compoments/OOBE/OOBE';
+import Background from './compoments/utils/Background';
 import './App.scss';
 
 const renderError = (err: Error) => (
@@ -44,10 +45,7 @@ const App: React.FC = () => {
   }
 
   return <>
-    <div
-      className="Page__background"
-      style={getBackgroundStyles(config)}
-    />
+    <Background config={config?.background} />
     <Page
       title={config?.title ?? 'Springboard'}
       style={config?.style}
