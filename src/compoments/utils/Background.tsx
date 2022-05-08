@@ -30,11 +30,9 @@ export const getBackgroundStyles = (cfg?: BackgroundConfig): React.CSSProperties
       return;
     }
 
-    const { url, blur, opacity, style } = cfg;
+    const { url, style } = cfg;
     const css = {
-      backgroundImage: getWallpaperUrl(url),
-      filter: blur ? `blur(${blur})` : 'none',
-      opacity: opacity ?? '1',
+      backgroundImage: getWallpaperUrl(url)
     };
 
     return style && isObject(style) ? { ...css, ...style } : css;
@@ -45,6 +43,8 @@ export const getBackgroundStyles = (cfg?: BackgroundConfig): React.CSSProperties
 };
 
 const Background: React.FC<Props> = ({ config }) => {
+  const styles = getBackgroundStyles(config);
+  console.log(styles);
   return (
     <div
       className="Background"

@@ -17,8 +17,6 @@ export interface Config {
   title: string;
   background?: {
     url: string | string[];
-    blur?: string;
-    opacity?: string;
     style?: CSSProperties;
   }
   groups?: ShortcutGroups
