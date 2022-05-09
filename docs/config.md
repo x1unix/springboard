@@ -11,6 +11,7 @@ Configuration example is available [here](../public/config/config.example.json).
 | `title` | `string` | Dashboard title |
 | `background` | `object` | Background URL and styles (optional) |
 | `groups` | `object` | Key-value pair of category name and items |
+| `style` | `object` | Custom CSS variables definition, see [global](../src/index.css) stylesheet |
 
 ### Background configuration
 
