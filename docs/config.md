@@ -2,6 +2,8 @@
 
 Configuration file should be in JSON format and accessible at path `/config/config.json`.
 
+Configuration example is available [here](../public/config/config.example.json).
+
 ## Root structure
 
 | Key | Type | Description |
@@ -14,7 +16,7 @@ Configuration file should be in JSON format and accessible at path `/config/conf
 
 | Key | Type | Description |
 | --- | ---- | ----------- |
-| `url` | `string | string[]` | Background image URL or array of URLs. Image will be selected randomly. |
+| `url` | `string \| string[]` | Background image URL or array of URLs. Image will be selected randomly. |
 | `style` | `object` | Custom CSS styles for background. CSS property name should be in camelCase. |
 
 ### Categories and items configuration
