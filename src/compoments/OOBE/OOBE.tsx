@@ -25,7 +25,7 @@ const OOBE: React.FC = () => {
       </div>
       <Conditional visible={!!configDocs}>
         <div>
-          More information about config syntax can be found <a href="/foo" target="_blank">here</a>
+          More information about config syntax can be found <a href={configDocs!} target="_blank" rel="noreferrer">here</a>
         </div>
       </Conditional>
       <Conditional visible={!!configExample?.length}>
