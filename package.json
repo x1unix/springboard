@@ -26,7 +26,10 @@
     "workbox-range-requests": "^6.5.3",
     "workbox-routing": "^6.5.3",
     "workbox-strategies": "^6.5.3",
-    "workbox-streams": "^6.5.3"
+    "workbox-streams": "^6.5.3",
+    "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "sass": "^1.51.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,10 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "clsx": "^1.1.1",
-    "cross-env": "^7.0.3",
-    "sass": "^1.51.0"
   }
 }
