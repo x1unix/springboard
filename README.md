@@ -1,5 +1,9 @@
 # Springboard
 
+[![Docker Hub](https://img.shields.io/docker/pulls/x1unix/springboard.svg)](https://hub.docker.com/r/x1unix/springboard)
+[![Docker Hub](https://img.shields.io/docker/v/x1unix/springboard.svg?sort=semver)](https://hub.docker.com/r/x1unix/springboard)
+[![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
+
 Simple and configurable services dashboard for server and IoT infrastructure.
 
 ![preview](docs/screenshot.png)
@@ -15,7 +19,7 @@ Just create a new config from [example](config/config.example.json) and mount it
 ```yaml
 services:
   dashboard:
-    image: x1unix/springboard
+    image: x1unix/springboard # or ghcr.io/x1unix/springboard/springboard:latest
     volumes:
       ./config:/var/www/config
     ports:
