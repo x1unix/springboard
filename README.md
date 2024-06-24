@@ -14,7 +14,7 @@ Simple and configurable services dashboard for server and IoT infrastructure.
 
 Project provides a simple HTTP server based on [static-file-server](https://hub.docker.com/r/halverneus/static-file-server/) Docker image.
 
-Just create a new config from [example](config/config.example.json) and mount it as `/var/www/config/config.json`.
+Just create a new config from [example](public/config/config.example.json) and mount it as `/var/www/config/config.json`.
 
 ```yaml
 services:
