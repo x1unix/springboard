@@ -4,6 +4,9 @@ on:
     types:
       - created
 
+env:
+  NODE_VERSION: lts/iron
+
 jobs:
   build:
     runs-on: ubuntu-latest
