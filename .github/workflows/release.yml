@@ -1,3 +1,6 @@
+permissions:
+  packages: write
+
 name: Build Docker Image
 on:
   release:
