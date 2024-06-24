@@ -41,8 +41,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            x1unix/go-playground
-            ghcr.io/${{ github.repository }}/go-playground
+            x1unix/springboard
+            ghcr.io/${{ github.repository }}/springboard
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
